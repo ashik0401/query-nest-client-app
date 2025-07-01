@@ -27,9 +27,9 @@ const LatestQuery = () => {
             <h2 className='md:text-4xl text-2xl font-bold Cursive text-primary md:text-start lg:mb-15 flex justify-center mb-10'>🕘 Latest Queries </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mt-2 transition-transform">
                 {queries.map((query) => (
-                    <div key={query._id} className="card bg-base-100    overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-3 transform transition-all duration-300 ">
-                        <figure className=''>
-                            <img src={query.imageUrl} alt={query.productBrand} className="w-full  object-cover" />
+                    <div key={query._id} className="card bg-base-100    overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-3 transform transition-all duration-300 lg:h-[600px] md:h-[500px] h-[600px]">
+                        <figure className='lg:h-96 md:h-72 h-96'>
+                            <img src={query.imageUrl} alt={query.productBrand} className="w-full h-full object-cover" />
                         </figure>
                         <div className="card-body p-4">
                             <h2 className="text-lg font-semibold Cursive">{query.productName}</h2>
