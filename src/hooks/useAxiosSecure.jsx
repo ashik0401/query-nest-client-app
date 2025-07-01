@@ -3,7 +3,7 @@ import axios from 'axios'
 import useAuth from './useAuth'
 
 const axiosSecure = axios.create({
-  baseURL: 'http://localhost:3000'
+  baseURL: 'https://query-nest-server-side.vercel.app'
 })
 
 const useAxiosSecure = () => {

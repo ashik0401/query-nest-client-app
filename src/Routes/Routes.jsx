@@ -84,7 +84,7 @@ export const router = createBrowserRouter([
                 hydrateFallbackElement: <div className='flex justify-center min-h-screen items-center'>
                     <span className="loading loading-ring loading-xl "></span>
                 </div>,
-                loader: () => fetch('http://localhost:3000/queries'),
+                loader: () => fetch('https://query-nest-server-side.vercel.app/queries'),
                 Component: AllQueries
             },
             {

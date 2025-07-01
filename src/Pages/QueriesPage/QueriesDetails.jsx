@@ -22,11 +22,11 @@ const QueriesDetails = () => {
     };
 
     useEffect(() => {
-        fetch(`http://localhost:3000/queries/${id}`)
+        fetch(`https://query-nest-server-side.vercel.app/queries/${id}`)
             .then(res => res.json())
             .then(data => setQuery(data));
 
-        fetch(`http://localhost:3000/recommendations/${id}`)
+        fetch(`https://query-nest-server-side.vercel.app/recommendations/${id}`)
             .then(res => res.json())
             .then(data => setRecommendations(data));
     }, [id]);
@@ -50,13 +50,13 @@ const QueriesDetails = () => {
             timeStamp: new Date()
         };
 
-        await fetch('http://localhost:3000/recommendations', {
+        await fetch('https://query-nest-server-side.vercel.app/recommendations', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
         });
 
-        fetch(`http://localhost:3000/recommendations/${id}`)
+        fetch(`https://query-nest-server-side.vercel.app/recommendations/${id}`)
             .then(res => res.json())
             .then(data => setRecommendations(data));
 

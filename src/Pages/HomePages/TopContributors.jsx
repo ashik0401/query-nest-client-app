@@ -4,7 +4,7 @@ const TopContributors = () => {
     const [contributors, setContributors] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/top-contributors")
+        fetch("https://query-nest-server-side.vercel.app/top-contributors")
             .then(res => res.json())
             .then(data => setContributors(data));
             

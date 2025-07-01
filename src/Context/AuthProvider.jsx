@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
             setLoading(false)
             if(currentUser?.email){
                 const userData={email:currentUser.email};
-                axios.post('http://localhost:3000/jwt',userData)
+                axios.post('https://query-nest-server-side.vercel.app/jwt',userData)
                 .then(res=>{
                     console.log('token after jwt',res.data);
                     

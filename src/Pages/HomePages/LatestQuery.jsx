@@ -7,7 +7,7 @@ const LatestQuery = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:3000/queries')
+        fetch('https://query-nest-server-side.vercel.app/queries')
             .then(res => res.json())
             .then(data => setQueries(data.slice(0, 6)))
             .finally(() => setLoading(false));

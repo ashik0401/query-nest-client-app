@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "query-nest-a854a"
-  }
+    "default": "query-nest-web-13121",
+    "query-nest-web": "query-nest-web-13121"
+  },
+  "targets": {},
+  "etags": {}
 }

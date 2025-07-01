@@ -17,7 +17,7 @@ const TrendingDiscussions = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch("http://localhost:3000/queries")
+        fetch("https://query-nest-server-side.vercel.app/queries")
             .then(res => res.json())
             .then(data => {
                 const sorted = data.sort((a, b) => (b.recommendationCount || 0) - (a.recommendationCount || 0));
