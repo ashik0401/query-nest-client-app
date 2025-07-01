@@ -73,7 +73,7 @@ const MyAllQueries = () => {
                     You have not added any queries yet.
                 </p>
             ) : (
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                     {myQueries.map((query, index) => (
                         <div key={index} className="card bg-base-100 shadow-sm overflow-hidden lg:h-[600px] md:h-[500px] h-[600px]">
                             <figure className='lg:h-96 md:h-72 h-96'>
