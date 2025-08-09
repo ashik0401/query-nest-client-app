@@ -7,7 +7,7 @@ import MyAllQueries from './MyAllQueries';
 
 const MyQueries = () => {
     return (
-        <div className='md:min-h-[900px] min-h-[700px] bg-base-200'>
+        <div className='md:min-h-[900px] min-h-[720px] bg-base-200'>
             <div className='relative max-h-[70vh] mb-20'>
                 <img
                     className=' full w-full '

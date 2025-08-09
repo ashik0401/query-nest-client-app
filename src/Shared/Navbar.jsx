@@ -23,6 +23,7 @@ const Navbar = () => {
       <li>
         <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} to="/queries">Queries</NavLink>
       </li>
+      
       {user && <li>
         <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} to="/recommendations/for-me" title='Recommendations For Me'>For Me</NavLink>
       </li>}
@@ -32,6 +33,9 @@ const Navbar = () => {
       {user && <li>
         <NavLink to="/recommendations" end className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} title='My Recommendations'>My Recs</NavLink>
       </li>}
+      <li>
+        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} to="/aboutUs">About Us</NavLink>
+      </li>
     </>
   );
 
@@ -52,7 +56,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex items-center justify-center">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="flex ">
           {links}
         </ul>
       </div>

@@ -86,7 +86,7 @@ const MyRecommendations = () => {
   }
 
   return (
-    <div className=" mt-5  md:w-11/12 mx-auto md:min-h-[650px] min-h-[650px] p-4">
+    <div className=" mt-5  md:w-11/12 mx-auto md:min-h-[700px] min-h-[700px] p-4">
       {myRecommendations.length === 0 ? (
         <p className="text-center text-gray-500 mt-10 text-lg font-medium">
           You have not made any recommendations yet.

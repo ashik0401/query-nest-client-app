@@ -18,7 +18,7 @@ const Footer = () => {
                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
 
 
-                <div className="flex gap-4 p-2">
+                {/* <div className="flex gap-4 p-2">
 
                     <a
                         href="https://www.facebook.com"
@@ -39,7 +39,7 @@ const Footer = () => {
                     </a>
 
 
-                </div>
+                </div> */}
                 
             </div>
         </footer>

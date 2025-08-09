@@ -46,7 +46,7 @@ const ForMe = () => {
     }
 
     return (
-        <div className="md:min-h-[650px] min-h-[700px] md:w-11/12 md:mx-auto px-4">
+        <div className="md:min-h-[680px] min-h-[680px] md:w-11/12 md:mx-auto px-4">
             <div className="max-w-6xl mt-10 mx-auto md:p-4 shadow-md border border-base-200 rounded-2xl p-5">
               
                 {recommendationsForMe.length === 0 ? (

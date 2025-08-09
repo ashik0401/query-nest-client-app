@@ -17,6 +17,7 @@ import UpdateQueries from "../Pages/QueriesPage/UpdateQueries";
 import RecommendationsLayouts from "../Layouts/RecommendationsLayouts";
 import MyRecommendations from "../Pages/Recommendations/MyRecommendations";
 import ForMe from "../Pages/Recommendations/ForMe";
+import AboutUs from "../Pages/AboutUs/AboutUs";
 
 
 export const router = createBrowserRouter([
@@ -30,7 +31,10 @@ export const router = createBrowserRouter([
                 Component: Home
             },
 
-
+            {
+                path: '/aboutUs',
+                Component: AboutUs
+            },
 
         ]
     },
