@@ -1,33 +1,32 @@
 [
-    {
-        "id": 1,
-        "title": "Find the Perfect Product",
-        "subtitle": "Get honest recommendations from real users.",
-        "image": "https://i.ibb.co/sd51pxK2/slider-1.png"
-    },
-    {
-        "id": 2,
-        "title": "Ask Before You Buy",
-        "subtitle": "Confused about a product? Post a query and get suggestions.",
-        "image": "https://i.ibb.co/vCzr0pbL/slider-2.jpg"
-       
-    },
-    {
-        "id": 3,
-        "title": "Top-Rated Picks for You",
-        "subtitle": "See what others are recommending this week.",
-        "image": "https://i.ibb.co/nNdzVqMn/slider-3.png"
-    },
-    {
-        "id": 4,
-        "title": "Smart Recommendations, Always",
-        "subtitle": "AI-backed + community-approved recommendations you can trust.",
-        "image": "https://i.ibb.co/nsfFmr2X/slide-4.jpg"
-    },
-    {
-        "id": 5,
-        "title": "Save Time, Buy Right",
-        "subtitle": "Let others help you decide what’s worth your money.",
-        "image": "https://i.ibb.co/SWSj1qk/slide-5.jpghttps://i.ibb.co/SWSj1qk/slide-5.jpg"
-    }
+  {
+    "id": 1,
+    "title": "Find the Perfect Product",
+    "description": "Discover the best products through genuine reviews and insights.\nMake informed choices backed by real user experiences.",
+    "image": "https://i.ibb.co/sd51pxK2/slider-1.png"
+  },
+  {
+    "id": 2,
+    "title": "Ask Before You Buy",
+    "description": "Not sure if a product is worth it? Post your query in seconds.\nGet recommendations from people who’ve actually used it.",
+    "image": "https://i.ibb.co/vCzr0pbL/slider-2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Top-Rated Picks for You",
+    "description": "Stay updated with the most recommended products this week.\nSee what’s trending based on community feedback.",
+    "image": "https://i.ibb.co/nNdzVqMn/slider-3.png"
+  },
+  {
+    "id": 4,
+    "title": "Smart Recommendations, Always",
+    "description": "Get AI-powered suggestions combined with real user opinions.\nTrust advice that blends technology with human experience.",
+    "image": "https://i.ibb.co/nsfFmr2X/slide-4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Save Time, Buy Right",
+    "description": "Skip endless research and go straight to the best options.\nLet the community guide you toward smarter purchases.",
+    "image": "https://i.ibb.co/SWSj1qk/slide-5.jpg"
+  }
 ]
