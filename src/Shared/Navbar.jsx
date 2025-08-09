@@ -18,29 +18,29 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'}`} to="/">Home</NavLink>
+        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline dark:text-[#079D68] font-bold' : 'text-primary  dark:text-white font-medium'}`} to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} to="/queries">Queries</NavLink>
+        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline dark:text-[#079D68] font-bold' : 'text-primary dark:text-white  font-medium'} font-bold`} to="/queries">Queries</NavLink>
       </li>
       
       {user && <li>
-        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} to="/recommendations/for-me" title='Recommendations For Me'>For Me</NavLink>
+        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline dark:text-[#079D68] font-bold' : 'text-primary dark:text-white  font-medium'} font-bold`} to="/recommendations/for-me" title='Recommendations For Me'>For Me</NavLink>
       </li>}
       {user && <li>
-        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} to="/myQueries">My Queries</NavLink>
+        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline dark:text-[#079D68] font-bold ' : 'text-primary dark:text-white  font-medium'} font-bold`} to="/myQueries">My Queries</NavLink>
       </li>}
       {user && <li>
-        <NavLink to="/recommendations" end className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} title='My Recommendations'>My Recs</NavLink>
+        <NavLink to="/recommendations" end className={({ isActive }) => `m-2 ${isActive ? 'underline dark:text-[#079D68] font-bold' : 'text-primary dark:text-white  font-medium'} font-bold`} title='My Recommendations'>My Recs</NavLink>
       </li>}
       <li>
-        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline font-bold' : 'text-primary font-medium'} font-bold`} to="/aboutUs">About Us</NavLink>
+        <NavLink className={({ isActive }) => `m-2 ${isActive ? 'underline dark:text-[#079D68] font-bold' : 'text-primary dark:text-white  font-medium'} font-bold`} to="/aboutUs">About Us</NavLink>
       </li>
     </>
   );
 
   return (
-    <div className="navbar sticky top-0 z-100 bg-base-200 shadow-sm md:px-20 px-4">
+    <div className="navbar sticky top-0 z-100 bg-base-200 shadow-sm lg:px-20 md:px-12 px-4">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn mr-1 p-1 btn-ghost lg:hidden">
@@ -52,7 +52,7 @@ const Navbar = () => {
         </div>
         <Link to='/' className='flex items-center gap-2'>
           <img className='w-10 h-10' src={logo} alt="" />
-          <p className="text-3xl font-semibold Cursive text-primary hidden md:block">QueryNest</p>
+          <p className="text-3xl font-semibold Cursive text-primary hidden md:block dark:text-white">QueryNest</p>
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex items-center justify-center">
@@ -65,8 +65,8 @@ const Navbar = () => {
         {user ? (
           <div>
             <div className=''>
-              <button onClick={handleLogOut} className="relative inline-block text-lg group hover:cursor-pointer">
-                <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-primary transition-colors duration-300 ease-out border-2 border-base-300 rounded-lg group-hover:text-white">
+              <button onClick={handleLogOut} className="relative inline-block text-lg group hover:cursor-pointer ">
+                <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-primary dark:text-[#079D68] transition-colors duration-300 ease-out border-2 border-base-300 rounded-lg group-hover:text-white">
                   <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
                   <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-base-300 group-hover:-rotate-180 ease"></span>
                   <span className="relative">Logout</span>
@@ -78,7 +78,7 @@ const Navbar = () => {
           </div>
         ) : (
           <Link to='/login' className="relative inline-block text-lg group">
-            <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-primary transition-colors duration-300 ease-out border-2 border-base-300 rounded-lg group-hover:text-white">
+            <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-primary dark:text-[#079D68] transition-colors duration-300 ease-out border-2 border-base-300 rounded-lg group-hover:text-white">
               <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
               <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-base-300 group-hover:-rotate-180 ease"></span>
               <span className="relative">Log-in</span>

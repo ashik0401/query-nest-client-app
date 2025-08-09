@@ -67,9 +67,9 @@ const MyAllQueries = () => {
 
     return (
         <div className='md:w-11/12 md:mx-auto px-4 mt-20'>
-            <h2 className='md:text-4xl text-2xl font-bold Cursive text-primary mb-10 lg:mb-15'>🏠 My Queries</h2>
+            <h2 className='md:text-4xl text-2xl font-bold Cursive text-primary mb-10 lg:mb-15 dark:text-white'>🏠 My Queries</h2>
             {myQueries.length === 0 ? (
-                <p className="text-center text-gray-500 mt-10 text-lg font-medium">
+                <p className="text-center text-gray-500 dark:text-white mt-10 text-lg font-medium">
                     You have not added any queries yet.
                 </p>
             ) : (
@@ -90,10 +90,10 @@ const MyAllQueries = () => {
                                         <Link to={`/queries/${query._id}`} className="btn h-6 min-h-6 bg-white border text-base-300 border-base-300 hover:bg-base-300 hover:text-white">
                                             <TiInfoLarge />
                                         </Link>
-                                        <Link to={`/myQueries/update-query/${query._id}`} className="btn h-6 min-h-6 bg-white border border-green-300 hover:bg-green-300">
+                                        <Link to={`/myQueries/update-query/${query._id}`} className="btn h-6 min-h-6 bg-white border border-green-300 hover:bg-green-300 dark:text-black">
                                             <LuPenLine />
                                         </Link>
-                                        <button onClick={() => handleDelete(query._id)} className="btn h-6 min-h-6 bg-white border border-red-300 hover:bg-red-400">
+                                        <button onClick={() => handleDelete(query._id)} className="btn h-6 min-h-6 dark:text-black bg-white border border-red-300 hover:bg-red-400">
                                             <AiOutlineDelete />
                                         </button>
                                     </div>

@@ -79,21 +79,21 @@ const MyRecommendations = () => {
 
   if (loading) {
     return (
-      <div className="flex justify-center items-center   md:min-h-[670px] min-h-[670px]">
+      <div className="flex justify-center items-center  min-h-screen">
         <span className="loading loading-ring loading-xl"></span>
       </div>
     )
   }
 
   return (
-    <div className=" mt-5  md:w-11/12 mx-auto md:min-h-[700px] min-h-[700px] p-4">
+    <div className=" mt-5  md:w-11/12 mx-auto md:min-h-[720px] min-h-[700px] p-4">
       {myRecommendations.length === 0 ? (
-        <p className="text-center text-gray-500 mt-10 text-lg font-medium">
+        <p className="text-center text-gray-500 dark:text-white mt-10 text-lg font-medium">
           You have not made any recommendations yet.
         </p>
       ) : (
         <div className="overflow-x-auto rounded-lg shadow border-2 border-gray-400">
-          <table className="min-w-full bg-white text-sm text-left border-collapse">
+          <table className="min-w-full bg-white dark:bg-transparent text-sm text-left border-collapse">
             <thead className="bg-gray-100 text-gray-700 uppercase text-xs">
               <tr>
                 <th className="p-3 border Cursive">Query Image</th>
@@ -107,7 +107,7 @@ const MyRecommendations = () => {
               {myRecommendations.map(rec => {
                 const post = postDetails[rec.queryId]
                 return (
-                  <tr key={rec._id} className="hover:bg-gray-50">
+                  <tr key={rec._id} className="hover:bg-gray-50 dark:hover:bg-black">
                     <td className="p-3 border border-gray-300">
                       {post?.imageUrl && (
                         <img

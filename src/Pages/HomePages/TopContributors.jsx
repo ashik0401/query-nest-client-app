@@ -31,7 +31,7 @@ const TopContributors = () => {
                                 className="w-20 h-20 rounded-full mb-4"
                             />
                             <h3 className="text-xl font-semibold Cursive">{user.userName}</h3>
-                            <p className="text-sm text-gray-600">{user.totalPosts} Helpful Posts</p>
+                            <p className="text-sm text-gray-600 dark:text-gray-300">{user.totalPosts} Helpful Posts</p>
                             <span className="mt-2 inline-block bg-base-200  text-yellow-600 text-xs px-3 py-1 rounded-full">
                                 Top Contributor
                             </span>

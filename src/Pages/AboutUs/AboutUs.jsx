@@ -1,15 +1,18 @@
 import React from "react";
 import { FaUsers, FaBullseye, FaLightbulb } from "react-icons/fa";
 
+
+
 const AboutUs = () => {
+  
   return (
-    <section className="bg-base-200 py-16 px-6 md:px-20">
+    <section className="bg-base-200 min-h-screen py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
         
-        <h2 className="text-4xl font-bold text-primary mb-4">
-          About <span className="text-primary">Us</span>
+        <h2 className="text-4xl font-bold text-primary dark:text-white mb-4">
+          About <span className="text-primary dark:text-white ">Us</span>
         </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto dark:text-white ">
           At <span className="font-semibold">Product Recommendation System</span>, 
           we believe that every purchase should be informed and confident.  
           Our platform empowers users to share their experiences, seek better alternatives, 
@@ -23,8 +26,8 @@ const AboutUs = () => {
           <div className="flex justify-center mb-4 text-blue-600 text-4xl">
             <FaBullseye />
           </div>
-          <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold mb-3 dark:text-black ">Our Mission</h3>
+          <p className="text-gray-600 ">
             To provide a trusted platform where users can voice their concerns 
             about products and receive valuable recommendations from real people.
           </p>
@@ -35,7 +38,7 @@ const AboutUs = () => {
           <div className="flex justify-center mb-4 text-green-600 text-4xl">
             <FaLightbulb />
           </div>
-          <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
+          <h3 className="text-xl font-semibold mb-3 dark:text-black">Our Vision</h3>
           <p className="text-gray-600">
             To create a global community that transforms product feedback into 
             collective wisdom, helping people make better choices every day.
@@ -47,7 +50,7 @@ const AboutUs = () => {
           <div className="flex justify-center mb-4 text-yellow-500 text-4xl">
             <FaUsers />
           </div>
-          <h3 className="text-xl font-semibold mb-3">Our Values</h3>
+          <h3 className="text-xl font-semibold mb-3 dark:text-black">Our Values</h3>
           <p className="text-gray-600">
             Transparency, collaboration, and trust are at the heart of everything 
             we do. We prioritize honesty and user empowerment in every interaction.
@@ -57,7 +60,7 @@ const AboutUs = () => {
 
     
       <div className="mt-16 text-center">
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-600 max-w-2xl mx-auto dark:text-white ">
           Together, we’re redefining the way people choose products — 
           not based on ads, but on real experiences and genuine recommendations.
         </p>

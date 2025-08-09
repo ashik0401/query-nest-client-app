@@ -48,7 +48,7 @@ const AllQueries = () => {
     }
 
     return (
-        <div className="pt-5 md:min-h-[720px] min-h-[500px] bg-base-200  md:w-11/12 md:mx-auto px-4">
+        <div className="pt-5 md:min-h-[750px] min-h-[500px] bg-base-200  md:w-11/12 md:mx-auto px-4">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between mb-6 ">
                 <div className="w-full lg:w-2/3 flex gap-2">
                     <input
@@ -73,12 +73,12 @@ const AllQueries = () => {
                         <option value="recommendations">Sort: Most Recommended</option>
                     </select>
 
-                    <div className="hidden sm:flex gap-1">
+                    <div className="hidden sm:flex gap-1 ">
                         {[1, 2, 3, 4].map(n => (
                             <button
                                 key={n}
                                 onClick={() => setGridCols(n)}
-                                className={`btn ${gridCols === n ? 'bg-base-300 text-white' : 'bg-white'}`}
+                                className={`btn ${gridCols === n ? 'bg-base-300 text-white' : 'bg-white dark:text-black'}`}
                             >
                                 {n}
                             </button>

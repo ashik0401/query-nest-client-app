@@ -45,10 +45,10 @@ const LogIn = () => {
     return (
         <div>
             <Navbar />
-            <div className='md:w-10/12 md:mx-auto flex items-center justify-around md:h-[901px] mx-2 h-[550px]'>
-                <div>
-                    <form onSubmit={handleLogIn} className='md:space-y-4 p-5 rounded-xl md:w-96 shadow-md userForm'>
-                        <h2 className='md:text-2xl text-lg font-semibold text-center text-secondary '>Login to your account</h2>
+            <div className='md:px-20 md:mx-auto flex items-center justify-around md:h-[901px] mx-2 h-[550px] bg-base-200'>
+                <div className=''>
+                    <form onSubmit={handleLogIn} className='md:space-y-4 p-5 rounded-xl md:w-96 shadow-md userForm border dark:border-gray-500 border-gray-200'>
+                        <h2 className='md:text-2xl text-lg font-semibold text-center text-secondary dark:text-white '>Login to your account</h2>
 
                         <div>
                             <label className='label md:text-lg'>Email</label>
@@ -84,7 +84,7 @@ const LogIn = () => {
                             <a className='link link-hover text-primary'>Forgot password?</a>
                         </div>
 
-                        <button type='submit' className='btn hover:bg-base-300 bg-secondary text-white w-full mt-2 '>
+                        <button type='submit' className='btn hover:bg-base-300 bg-secondary dark:bg-[#079D68]  text-white w-full mt-2 '>
                             Login
                         </button>
 
@@ -102,7 +102,7 @@ const LogIn = () => {
                             <p className='text-center text-sm '>
                                 Don’t have an account?
                                 <Link to='/register'>
-                                    <span className='ml-1 text-secondary hover:underline font-semibold'>Register</span>
+                                    <span className='ml-1 text-secondary hover:underline font-semibold dark:text-[#079D68] '>Register</span>
                                 </Link>
                             </p>
                         </div>

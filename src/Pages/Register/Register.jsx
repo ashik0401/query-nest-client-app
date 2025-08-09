@@ -62,10 +62,10 @@ const Register = () => {
   return (
     <div>
       <Navbar />
-      <div className='md:w-10/12 md:mx-auto flex items-center justify-around md:h-[901px] mx-2 h-[550px]'>
-        <div className='md:w-[50%]'>
-          <form onSubmit={handleRegister} className='md:space-y-4 p-5 rounded-xl md:w-96 shadow-md userForm'>
-            <h2 className='font-semibold md:text-2xl text-lg text-center text-secondary'>Register your account</h2>
+      <div className='md:px-20 md:mx-auto flex items-center justify-around md:h-[901px] mx-2 h-[550px] bg-base-200 '>
+        <div className='md:w-[50%] flex justify-center'>
+          <form onSubmit={handleRegister} className='md:space-y-4 p-5 rounded-xl md:w-96 shadow-md userForm border dark:border-gray-500 border-gray-200  '>
+            <h2 className='font-semibold md:text-2xl text-lg text-center text-secondary dark:text-white '>Register your account</h2>
 
             <div>
               <label className='label md:text-lg'>Name</label>
@@ -105,7 +105,7 @@ const Register = () => {
 
             {error && <p className='text-red-500'>{error}</p>}
 
-            <button type='submit' className='btn hover:bg-base-300 text-white w-full mt-5 bg-secondary'>
+            <button type='submit' className='btn hover:bg-base-300 text-white w-full mt-5 bg-secondary dark:bg-[#079D68] '>
               Register
             </button>
 
@@ -122,7 +122,7 @@ const Register = () => {
             <p className='text-center mt-4'>
               Already have an Account?
               <Link to='/login'>
-                <span className='ml-1 text-secondary hover:underline font-semibold'>Login</span>
+                <span className='ml-1 text-secondary hover:underline font-semibold dark:text-[#079D68] '>Login</span>
               </Link>
             </p>
           </form>

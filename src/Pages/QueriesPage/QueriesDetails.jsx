@@ -75,37 +75,39 @@ const QueriesDetails = () => {
     </div>;
 
     return (
-        <div className="max-w-6xl  mx-auto mt-10 flex flex-col lg:flex-row gap-6 md:px-4">
-            <div className="w-full  lg:w-2/3 bg-white md:p-6 rounded-xl shadow max-h-[90vh] overflow-auto">
+        <div className=" md:w-11/12 md:mx-auto mt-10 flex flex-col md:flex-row gap-6 md:px-4 mx-5">
+            <div className="w-full  lg:w-2/3 bg-white md:p-6 rounded-xl shadow max-h-[90vh] overflow-auto p-5">
                 <div className="flex items-center gap-3 mb-4">
                     <img src={query.userPhoto} className="w-15 h-15  rounded-full" alt="" />
                     <div>
-                        <p className="font-semibold md:text-2xl Cursive">{query.userName}</p>
+                        <p className="font-semibold md:text-2xl Cursive dark:text-black">{query.userName}</p>
                         <p className="text-sm text-gray-500">{query.
                             userEmail}</p>
                         <p className="text-sm text-gray-500">{new Date(query.createdAt).toLocaleString()}</p>
                     </div>
                 </div>
-                <img src={query.imageUrl} className="w-full object-cover rounded mb-4" alt="" />
+                <div className='w-full flex justify-center'>
+                    <img src={query.imageUrl} className=" w-[500px] object-cover rounded mb-4" alt="" />
+                </div>
                 <h2 className="text-2xl font-bold mb-2 Cursive">{query.productName}</h2>
                 <p className="text-gray-700 mb-2"><strong>Brand:</strong> {query.productBrand}</p>
                 <p className="text-gray-800"><strong>Title: </strong>{query.queryTitle}</p>
                 <p className="text-gray-800"><strong>reason: </strong>{query.reason}</p>
                 <button
                     onClick={() => setShowForm(prev => !prev)}
-                    className={`mt-4 px-4 py-2 rounded w-full text-white ${showForm ? 'bg-red-500' : 'bg-base-300'} cursor-pointer`}
+                    className={`mt-4 px-4 py-2 rounded w-full text-white ${showForm ? 'bg-red-500' : 'bg-base-300 dark:bg-[#079D68]'} cursor-pointer`}
                 >
                     {showForm ? 'Close Recommendation Form' : 'Add Recommendation'}
                 </button>
 
                 {showForm && (
-                    <form onSubmit={handleSubmit} className="mt-4 space-y-3 bg-red-100 p-4 rounded">
+                    <form onSubmit={handleSubmit} className="mt-4 space-y-3 bg-red-100 p-4 rounded dark:text-black">
                         <input
                             name="recommendationTitle"
                             value={form.recommendationTitle}
                             onChange={handleChange}
                             placeholder="Recommendation Title"
-                            className="w-full border px-3 py-2 rounded"
+                            className="w-full border px-3 py-2 rounded "
                             required
                         />
                         <input
@@ -143,24 +145,26 @@ const QueriesDetails = () => {
             </div>
 
             <div className="w-full lg:w-1/3 space-y-6 overflow-auto max-h-[90vh]">
-                <h3 className="text-xl font-semibold mb-4 bg-white sticky top-0 z-10 border-b border-gray-300 px-2 py-2">
+                <h3 className="text-xl font-semibold mb-4 bg-white sticky top-0 z-10 border-b border-gray-300 px-2 py-2 dark:text-black">
                     All Recommendations: {query.recommendationCount}
                 </h3>
                 {recommendations.length === 0 && <p>No recommendations yet.</p>}
                 {recommendations.map((rec, index) => (
-                    <div key={index} className="bg-white rounded-xl p-4 shadow">
+                    <div key={index} className="bg-white  rounded-xl p-4 shadow">
                         <div className="flex items-start gap-4 mb-3">
                             <img src={rec.recommenderPhoto} className="w-10 h-10 rounded-full" alt="" />
                             <div>
-                                <p className="font-semibold Cursive">{rec.recommenderName}</p>
-                                <p className="text-sm text-gray-500">{rec.recommenderEmail}</p>
+                                <p className="font-semibold Cursive dark:text-black">{rec.recommenderName}</p>
+                                <p className="text-sm text-gray-500 ">{rec.recommenderEmail}</p>
                                 <p className="text-xs text-gray-400">{new Date(rec.timeStamp).toLocaleString()}</p>
                             </div>
                         </div>
-                        <img src={rec.recommendedProductImage} alt="" className="object-cover rounded mb-3" />
-                        <h4 className="text-md font-bold Cursive">{rec.recommendedProductName}</h4>
-                        <p><strong>Title:</strong>  {rec.recommendationTitle}</p>
-                        <p><strong>Reason:</strong> {rec.recommendationReason}</p>
+                       <div className='full flex justify-center'>
+                         <img src={rec.recommendedProductImage} alt="" className="object-cover rounded mb-3 md:w-full sm:w-[150px] w-[100px]" />
+                       </div>
+                        <h4 className="text-md font-bold Cursive dark:text-black">{rec.recommendedProductName}</h4>
+                        <p className='dark:text-black'><strong>Title:</strong>  {rec.recommendationTitle}</p>
+                        <p className='dark:text-black'><strong>Reason:</strong> {rec.recommendationReason}</p>
                     </div>
                 ))}
             </div>

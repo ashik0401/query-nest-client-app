@@ -24,7 +24,7 @@ const LatestQuery = () => {
 
     return (
         <div className='mt-20 md:w-11/12 md:mx-auto px-4'>
-            <h2 className='md:text-4xl text-2xl font-bold Cursive text-primary md:text-start lg:mb-15 flex justify-center mb-10'>🕘 Latest Queries </h2>
+            <h2 className='md:text-4xl text-2xl font-bold Cursive text-primary md:text-start lg:mb-15 flex justify-center mb-10 dark:text-white'>🕘 Latest Queries </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mt-2 transition-transform">
                 {queries.map((query) => (
                     <div key={query._id} className="card bg-base-100    overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-3 transform transition-all duration-300 lg:h-[600px] md:h-[500px] h-[600px]">
@@ -44,7 +44,7 @@ const LatestQuery = () => {
                                     to={`/queries/${query._id}`}
                                     className="relative inline-block text-lg group"
                                 >
-                                    <span className="relative z-10 block px-4 py-3 overflow-hidden font-medium leading-tight text-primary transition-colors duration-300 ease-out border-2 border-base-300 rounded-lg group-hover:text-white">
+                                    <span className="relative z-10 block px-4 py-3 overflow-hidden font-medium leading-tight text-primary dark:text-[#079D68] transition-colors duration-300 ease-out border-2 border-base-300 rounded-lg group-hover:text-white">
                                         <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
                                         <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-base-300 group-hover:-rotate-180 ease"></span>
                                         <span className="relative"><TiInfoLarge /></span>

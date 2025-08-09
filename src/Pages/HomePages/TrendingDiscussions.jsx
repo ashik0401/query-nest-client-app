@@ -36,7 +36,7 @@ const TrendingDiscussions = () => {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="md:text-4xl text-2xl font-bold text-center mb-10 lg:mb-15 Cursive text-primary"
+                    className="md:text-4xl text-2xl font-bold text-center mb-10 lg:mb-15 Cursive text-primary dark:text-white"
                 >
                     🔥Trending Product Discussions
                 </motion.h2>
@@ -58,16 +58,16 @@ const TrendingDiscussions = () => {
                                 className="group border bg-base-100   shadow-md rounded-xl p-6 transition duration-300 h-full flex flex-col justify-between border-gray-400"
                             >
                                 <div className="flex justify-between items-start mb-4">
-                                    <span className="text-sm font-medium text-gray-600 truncate max-w-[70%]">{query.productName}</span>
+                                    <span className="text-sm font-medium text-gray-600 dark:text-[#079D68] truncate max-w-[70%]">{query.productName}</span>
                                     <span className="flex items-center gap-1 text-sm text-green-600 min-w-fit">
                                         <FaComments />
                                         {query.recommendationCount || 0}
                                     </span>
                                 </div>
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition">
+                                <h3 className="text-xl font-semibold text-gray-800 mb-2 group-hover:text-blue-600 dark:text-white transition">
                                     {query.queryTitle}
                                 </h3>
-                                <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                                <p className="text-gray-600 text-sm line-clamp-3 mb-4 dark:text-white">
                                     {query.productBrand}
                                 </p>
                                 <div className="flex justify-between items-center mt-auto">
