@@ -66,8 +66,8 @@ const MyAllQueries = () => {
     }
 
     return (
-        <div className='md:w-11/12 md:mx-auto px-4'>
-            <h2 className='md:text-4xl text-2xl font-bold Cursive text-primary mb-10 '>🏠 My Queries</h2>
+        <div className='md:w-11/12 md:mx-auto px-4 mt-20'>
+            <h2 className='md:text-4xl text-2xl font-bold Cursive text-primary mb-10 lg:mb-15'>🏠 My Queries</h2>
             {myQueries.length === 0 ? (
                 <p className="text-center text-gray-500 mt-10 text-lg font-medium">
                     You have not added any queries yet.

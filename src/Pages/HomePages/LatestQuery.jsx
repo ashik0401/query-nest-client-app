@@ -23,7 +23,7 @@ const LatestQuery = () => {
     }
 
     return (
-        <div className='my-20 md:w-11/12 md:mx-auto px-4'>
+        <div className='mt-20 md:w-11/12 md:mx-auto px-4'>
             <h2 className='md:text-4xl text-2xl font-bold Cursive text-primary md:text-start lg:mb-15 flex justify-center mb-10'>🕘 Latest Queries </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4  gap-4 mt-2 transition-transform">
                 {queries.map((query) => (

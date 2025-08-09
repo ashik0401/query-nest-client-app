@@ -11,7 +11,7 @@ const TopContributors = () => {
     }, []);
 
     return (
-        <section className="mb-20  md:w-11/12 md:mx-auto px-4">
+        <section className="mt-20  md:w-11/12 md:mx-auto px-4">
             <div className="container  ">
                 <h2 className="md:text-4xl text-2xl font-bold text-center lg:mb-15 mb-10">Top Contributors</h2>
                 

@@ -5,7 +5,7 @@ import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="bg-base-200">
+        <footer className="bg-base-200 ">
             <div className="flex mx-5 flex-col justify-center items-center mt-5 py-10">
 
 
@@ -18,28 +18,6 @@ const Footer = () => {
                <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
 
 
-                {/* <div className="flex gap-4 p-2">
-
-                    <a
-                        href="https://www.facebook.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 bg-[#1877F2] rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                    >
-                        <FaFacebookF className="text-white text-xl" />
-                    </a>
-
-                    <a
-                        href="https://www.linkedin.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 bg-[#0077B5] rounded-full flex items-center justify-center hover:scale-110 transition-transform"
-                    >
-                        <FaLinkedinIn className="text-white text-xl" />
-                    </a>
-
-
-                </div> */}
                 
             </div>
         </footer>

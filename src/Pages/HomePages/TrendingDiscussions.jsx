@@ -30,13 +30,13 @@ const TrendingDiscussions = () => {
     }, []);
 
     return (
-        <section className="py-5 mb-20 md:w-11/12 md:mx-auto px-4">
+        <section className="py-5  md:w-11/12 md:mx-auto px-4 mt-20">
             <div className=" ">
                 <motion.h2
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="md:text-4xl text-2xl font-bold text-center mb-10 Cursive text-primary"
+                    className="md:text-4xl text-2xl font-bold text-center mb-10 lg:mb-15 Cursive text-primary"
                 >
                     🔥Trending Product Discussions
                 </motion.h2>
