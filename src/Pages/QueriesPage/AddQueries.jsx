@@ -55,7 +55,7 @@ export default function AddQueries() {
     };
 
     return (
-        <div className="h-[600px]">
+        <div className="h-[620px]">
             <div className="max-w-xl mx-5 md:mx-auto mt-30 bg-white dark:bg-black md:p-6 p-2 rounded-xl shadow">
                 <h2 className="md:text-4xl text-primary text-center font-bold mb-4 flex items-center justify-center gap-2 text-xl Cursive dark:text-white">
                     <BsPlusCircleDotted /> Add Your Query

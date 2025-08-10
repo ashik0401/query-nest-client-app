@@ -68,7 +68,7 @@ const UpdateQueries = () => {
     }
 
     return (
-        <div className='h-[600px]'>
+        <div className='h-[620px]'>
             <div className="max-w-xl mx-auto mt-30 bg-white dark:bg-black md:p-6 p-2 rounded-xl shadow">
                 <h2 className="md:text-4xl text-primary text-center font-bold mb-4 text-lg Cursive dark:text-white"> 🔄Update Your Query</h2>
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
