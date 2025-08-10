@@ -47,12 +47,12 @@ const ForMe = () => {
 
     return (
         <div className="md:min-h-[700px] min-h-[680px] md:w-11/12 md:mx-auto px-4 ">
-            <div className="max-w-6xl mt-10 mx-auto md:p-4 shadow-md border border-base-200 rounded-2xl p-5">
+            <div className="max-w-6xl mt-10 mx-auto md:p-4 border border-base-200 rounded-2xl p-5">
               
                 {recommendationsForMe.length === 0 ? (
                     <p className='text-center'>No recommendations found for your queries.</p>
                 ) : (
-                    <div className="overflow-x-auto rounded-2xl border  ">
+                    <div className="overflow-x-auto rounded-2xl border shadow-md  ">
                         <table className="min-w-full  bg-white dark:bg-transparent  shadow">
                             <thead>
                                 <tr className="bg-gray-200 text-left">

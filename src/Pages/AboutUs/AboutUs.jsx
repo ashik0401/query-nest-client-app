@@ -22,36 +22,36 @@ const AboutUs = () => {
 
       <div className="grid md:grid-cols-3 gap-10 mt-14">
        
-        <div className="bg-white shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
+        <div className="shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
           <div className="flex justify-center mb-4 text-blue-600 text-4xl">
             <FaBullseye />
           </div>
-          <h3 className="text-xl font-semibold mb-3 dark:text-black ">Our Mission</h3>
-          <p className="text-gray-600 ">
+          <h3 className="text-xl font-semibold mb-3 dark:text-white">Our Mission</h3>
+          <p className="text-gray-600 dark:text-white">
             To provide a trusted platform where users can voice their concerns 
             about products and receive valuable recommendations from real people.
           </p>
         </div>
 
       
-        <div className="bg-white shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
+        <div className="shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
           <div className="flex justify-center mb-4 text-green-600 text-4xl">
             <FaLightbulb />
           </div>
-          <h3 className="text-xl font-semibold mb-3 dark:text-black">Our Vision</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold mb-3 dark:text-white">Our Vision</h3>
+          <p className="text-gray-600 dark:text-white">
             To create a global community that transforms product feedback into 
             collective wisdom, helping people make better choices every day.
           </p>
         </div>
 
        
-        <div className="bg-white shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
+        <div className=" dark:bg-transparent dark:text-white shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
           <div className="flex justify-center mb-4 text-yellow-500 text-4xl">
             <FaUsers />
           </div>
-          <h3 className="text-xl font-semibold mb-3 dark:text-black">Our Values</h3>
-          <p className="text-gray-600">
+          <h3 className="text-xl font-semibold mb-3 dark:text-white ">Our Values</h3>
+          <p className="text-gray-600 dark:text-white">
             Transparency, collaboration, and trust are at the heart of everything 
             we do. We prioritize honesty and user empowerment in every interaction.
           </p>

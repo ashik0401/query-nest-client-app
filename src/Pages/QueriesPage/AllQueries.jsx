@@ -145,7 +145,7 @@ const AllQueries = () => {
                                     <h2 className="text-lg sm:text-xl font-semibold mb-1 truncate">
                                         {query.productName}
                                     </h2>
-                                    <p className="text-gray-700 truncate">
+                                    <p className="text-gray-700 dark:text-white truncate">
                                         <strong>Brand:</strong> {query.productBrand}
                                     </p>
                                     <p className="truncate">
