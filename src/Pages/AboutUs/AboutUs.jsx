@@ -22,7 +22,7 @@ const AboutUs = () => {
 
       <div className="grid md:grid-cols-3 gap-10 mt-14">
        
-        <div className="shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
+        <div className="bg-transparent shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
           <div className="flex justify-center mb-4 text-blue-600 text-4xl">
             <FaBullseye />
           </div>
@@ -34,7 +34,7 @@ const AboutUs = () => {
         </div>
 
       
-        <div className="shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
+        <div className="bg-transparent shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
           <div className="flex justify-center mb-4 text-green-600 text-4xl">
             <FaLightbulb />
           </div>
@@ -46,7 +46,7 @@ const AboutUs = () => {
         </div>
 
        
-        <div className=" dark:bg-transparent dark:text-white shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
+        <div className=" bg-transparent  shadow-lg rounded-xl p-8 hover:shadow-xl transition-shadow duration-300 text-center">
           <div className="flex justify-center mb-4 text-yellow-500 text-4xl">
             <FaUsers />
           </div>
