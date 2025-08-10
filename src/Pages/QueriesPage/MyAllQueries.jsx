@@ -84,16 +84,16 @@ const MyAllQueries = () => {
                                 <p><strong>Brand:</strong> {query.productBrand}</p>
                                 <p><strong>Title:</strong> {query.queryTitle}</p>
                                 <p><strong>Reason:</strong> {query.reason}</p>
-                                <div className="flex items-center justify-between gap-2 mt-auto pt-2 border-t border-gray-200">
+                                <div className="flex items-center justify-between gap-2 mt-auto pt-2 border-t border-gray-200 flex-wrap">
                                     <p className="font-semibold whitespace-nowrap"><strong>Total:</strong> {query.recommendationCount || 0}</p>
-                                    <div className="flex gap-1">
-                                        <Link to={`/queries/${query._id}`} className="btn h-6 min-h-6 bg-white border text-base-300 border-base-300 hover:bg-base-300 hover:text-white">
+                                    <div className="flex gap-1 flex-wrap ">
+                                        <Link to={`/queries/${query._id}`} className="btn h-6 min-h-6 bg-white border text-base-300 dark:bg-transparent dark:text-white dark:border-white border-base-300 hover:bg-base-300 hover:text-white dark:hover:bg-white dark:hover:text-black">
                                             <TiInfoLarge />
                                         </Link>
-                                        <Link to={`/myQueries/update-query/${query._id}`} className="btn h-6 min-h-6 bg-white border border-green-300 hover:bg-green-300 dark:text-black">
+                                        <Link to={`/myQueries/update-query/${query._id}`} className="btn h-6 min-h-6 bg-white border border-green-300 hover:bg-green-300 dark:bg-transparent dark:hover:text-black">
                                             <LuPenLine />
                                         </Link>
-                                        <button onClick={() => handleDelete(query._id)} className="btn h-6 min-h-6 dark:text-black bg-white border border-red-300 hover:bg-red-400">
+                                        <button onClick={() => handleDelete(query._id)} className="btn h-6 min-h-6 dark:bg-transparent bg-white border border-red-300 hover:bg-red-400 dark:hover:text-black">
                                             <AiOutlineDelete />
                                         </button>
                                     </div>
