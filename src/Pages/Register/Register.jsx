@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import useAuth from '../../hooks/useAuth';
 import { Link, useNavigate } from 'react-router';
 import { updateProfile } from 'firebase/auth';
@@ -7,29 +7,42 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import logo from '../../assets/logo-transparent.png';
 import Navbar from '../../Shared/Navbar';
 import Footer from '../../Shared/Footer';
+import useImgBBUpload from '../../Shared/UseImgBBUpload';
 
 const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const { createUser, googleSignIn } = useAuth();
   const navigate = useNavigate();
   const [error, setError] = useState('');
+  const { loading: imgLoading, imageUrl, uploadImage } = useImgBBUpload(import.meta.env.VITE_image_upload_key);
+  const inputFileRef = useRef(null);
+
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+    const url = await uploadImage(file);
+    if (url) {
+      toast.success('Image uploaded!');
+    } else {
+      toast.error('Image upload failed');
+    }
+  };
 
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-    const { email, password, name, image_url } = Object.fromEntries(formData.entries());
+    const { email, password, name } = Object.fromEntries(formData.entries());
 
     createUser(email, password)
       .then((result) => {
         updateProfile(result.user, {
           displayName: name,
-          photoURL: image_url
+          photoURL: imageUrl || ''
         }).then(() => {
           const userProfile = {
             email,
             name,
-            image_url,
+            image_url: imageUrl || '',
             creationTime: result.user?.metadata?.creationTime,
             lastLogInTime: result.user?.metadata?.creationTime
           };
@@ -64,8 +77,37 @@ const Register = () => {
       <Navbar />
       <div className='md:px-20 md:mx-auto flex items-center justify-around md:h-[901px] mx-2 h-[550px] bg-base-200 '>
         <div className='md:w-[50%] flex justify-center'>
-          <form onSubmit={handleRegister} className='md:space-y-4 p-5 rounded-xl md:w-96 shadow-md userForm border dark:border-gray-500 border-gray-200  '>
-            <h2 className='font-semibold md:text-2xl text-lg text-center text-secondary dark:text-white '>Register your account</h2>
+          <form onSubmit={handleRegister} className='md:space-y-4 p-5 rounded-xl md:w-96 shadow-md userForm border dark:border-gray-500 border-gray-200'>
+            <h2 className='font-semibold md:text-2xl text-lg text-center text-secondary dark:text-white'>Register your account</h2>
+
+            <div className='flex flex-col items-center mb-4'>
+              <input
+                type='file'
+                accept='image/*'
+                onChange={handleImageChange}
+                ref={inputFileRef}
+                style={{ display: 'none' }}
+              />
+              <div
+                onClick={() => inputFileRef.current?.click()}
+                className='cursor-pointer rounded-full border-2 border-dashed border-gray-400 dark:border-gray-600 w-32 h-32 flex items-center justify-center overflow-hidden bg-gray-100 dark:bg-gray-700'
+                title="Click to upload image"
+              >
+                {imgLoading ? (
+                  <p className='text-sm text-blue-500'>Uploading...</p>
+                ) : imageUrl ? (
+                  <img
+                    src={imageUrl}
+                    alt='Preview'
+                    className='object-cover w-full h-full rounded-full'
+                  />
+                ) : (
+                  <span className='text-gray-400 dark:text-gray-300 text-center p-4'>
+                    Click here to upload <br /> profile image
+                  </span>
+                )}
+              </div>
+            </div>
 
             <div>
               <label className='label md:text-lg'>Name</label>
@@ -75,11 +117,6 @@ const Register = () => {
             <div>
               <label className='label md:text-lg'>Email</label>
               <input type='email' name='email' className='input input-bordered w-full focus:outline-none' placeholder='Email' required />
-            </div>
-
-            <div>
-              <label className='label md:text-lg'>Image URL</label>
-              <input type='text' name='image_url' className='input input-bordered w-full focus:outline-none' placeholder='Profile Image URL' />
             </div>
 
             <div>
@@ -105,8 +142,8 @@ const Register = () => {
 
             {error && <p className='text-red-500'>{error}</p>}
 
-            <button type='submit' className='btn hover:bg-base-300 text-white w-full mt-5 bg-secondary dark:bg-[#079D68] '>
-              Register
+            <button type='submit' disabled={imgLoading} className='btn hover:bg-base-300 text-white w-full mt-5 bg-secondary dark:bg-[#079D68]'>
+              {imgLoading ? 'Uploading...' : 'Register'}
             </button>
 
             <div className='divider'>OR</div>
@@ -117,12 +154,12 @@ const Register = () => {
                 <path fill='#fbbc02' d='m90 341a208 200 0 010-171l63 49q-12 37 0 73' />
                 <path fill='#ea4335' d='m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55' />
               </svg>
-              <span className='ml-2 text-base-content'>Login with Google</span>
+              <span className='ml-2 text-base-content dark:text-black'>Login with Google</span>
             </button>
             <p className='text-center mt-4'>
               Already have an Account?
               <Link to='/login'>
-                <span className='ml-1 text-secondary hover:underline font-semibold dark:text-[#079D68] '>Login</span>
+                <span className='ml-1 text-secondary hover:underline font-semibold dark:text-[#079D68]'>Login</span>
               </Link>
             </p>
           </form>

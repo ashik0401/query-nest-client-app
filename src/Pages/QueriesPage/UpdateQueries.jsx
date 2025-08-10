@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { toast } from 'react-hot-toast';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
+import useImgBBUpload from '../../Shared/UseImgBBUpload';
 
 const UpdateQueries = () => {
     const { id } = useParams();
@@ -10,6 +11,8 @@ const UpdateQueries = () => {
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
     const axiosSecure = useAxiosSecure();
+
+    const { loading: imgLoading, imageUrl, uploadImage } = useImgBBUpload(import.meta.env.VITE_image_upload_key);
 
     useEffect(() => {
         axiosSecure.get(`/queries/${id}`)
@@ -22,11 +25,25 @@ const UpdateQueries = () => {
             });
     }, [id, axiosSecure]);
 
+    const handleImageChange = async (e) => {
+        const file = e.target.files[0];
+        const url = await uploadImage(file);
+        if (url) {
+            toast.success("Image uploaded!");
+        } else {
+            toast.error("Image upload failed");
+        }
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const form = e.target;
         const formData = new FormData(form);
         const updatedData = Object.fromEntries(formData.entries());
+
+        if (imageUrl) {
+            updatedData.imageUrl = imageUrl;
+        }
 
         try {
             const res = await axiosSecure.patch(`/queries/${id}`, updatedData);
@@ -70,12 +87,19 @@ const UpdateQueries = () => {
                         placeholder="Product Brand"
                     />
                     <input
-                        name="imageUrl"
-                        defaultValue={queryData.imageUrl}
-                        required
-                        className="input input-bordered w-full"
-                        placeholder="Image URL"
+                        type="file"
+                        accept="image/*"
+                        onChange={handleImageChange}
+                        className="file-input w-full"
                     />
+                    {imgLoading && <p className="text-sm text-blue-500">Uploading image...</p>}
+                    {(imageUrl || queryData.imageUrl) && (
+                        <img
+                            src={imageUrl || queryData.imageUrl}
+                            alt="Preview"
+                            className="w-32 mt-2 rounded"
+                        />
+                    )}
                     <input
                         name="queryTitle"
                         defaultValue={queryData.queryTitle}
@@ -90,7 +114,19 @@ const UpdateQueries = () => {
                         className="textarea textarea-bordered w-full"
                         placeholder="Boycotting Reason"
                     />
-                    <button type="submit" className="btn bg-base-300 text-white w-full dark:bg-[#079D68]">Update Query</button>
+                   
+                    <button
+                        type="submit"
+                        className={`btn w-full ${imgLoading ? "bg-gray-400 text-black dark:text-white" : "bg-base-300 text-white dark:bg-[#079D68]"
+                            }`}
+                        disabled={imgLoading}
+                    >
+                        {imgLoading ? (
+                            <span className="animate-pulse">Uploading...</span>
+                        ) : (
+                            "Update Query"
+                        )}
+                    </button>
                 </form>
             </div>
         </div>
